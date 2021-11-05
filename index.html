@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 주용진 - attr tab </title>
+    <script src="./script/jquery-1.11.3.js"></script>
+    <script>
+        // 이미지 속성 선택하여 탭 메뉴 제작하기
+        $(function(){
+            $(".btn1").on("click",function(){
+                $(".frame img").attr({"src":"./images/01-mockup.png","alt":"반응형목업"});
+            });
+            $(".btn2").on("click",function(){
+                $(".frame img").attr({"src":"./images/02-mockup.png","alt":"이모티콘1"});
+            });
+            $(".btn3").on("click",function(){
+                $(".frame img").attr({"src":"./images/03-mockup.png","alt":"이모티콘2"});
+            });
+            $(".btn4").on("click",function(){
+                $(".frame img").attr({"src":"./images/04-mockup.png","alt":"카멜레온1"});
+            });
+            $(".btn5").on("click",function(){
+                $(".frame img").attr({"src":"./images/05-mockup.png","alt":"카멜레온2"});
+            });
+        });
+    </script>
+    <style>
+        * {margin: 0; padding: 0;}
+        ul,li {margin: 0; padding: 0; list-style: none;}
+        body {background: #dedede;}
+
+        #pf {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+        #pf ul {display: flex; justify-content: space-between;}
+        #pf ul li a {background: #000; font-size: 14px; text-decoration: none; color: #fff;
+        display: block; width: 135px; padding: 10px 0 10px 0; text-align: center;
+        border-top-left-radius: 10px; border-top-right-radius: 10px;
+    }
+        #pf ul li a:hover {background: #999;}
+        #pf ul li a:focus {background: rgb(119, 119, 119);}
+
+        #pf .frame img {border: 1px solid #000;}
+    </style>
+</head>
+<body>
+    <div id="pf">
+        <div class="menu">
+            <ul>
+                <li><a href="#" class="btn1">반응형목업</a></li>
+                <li><a href="#" class="btn2">이모티콘1</a></li>
+                <li><a href="#" class="btn3">이모티콘2</a></li>
+                <li><a href="#" class="btn4">카멜레온1</a></li>
+                <li><a href="#" class="btn5">카멜레온2</a></li>
+            </ul>
+        </div>
+        <div class="frame">
+            <a href="#"><img src="./images/01-mockup.png" alt="반응형목업"></a>
+        </div>
+    </div>
+</body>
+</html>
